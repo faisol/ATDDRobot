@@ -4,6 +4,9 @@ Library    Selenium2Library
 *** Variables ***
 
 *** Testcases ***
+ทดสอบ FizzBuzz หมายเลข 3 ต้องพูดว่า Fizz
+    Open Browser    http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+    Wait Until Page Contains    FizzBuzz Game
 
 *** Keywords ***
 
