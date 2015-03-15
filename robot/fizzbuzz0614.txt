@@ -1,0 +1,11 @@
+*** Settings ***
+Library    selenium2Library
+
+*** variables ***
+${WEP FIZZBUZZ}    http://dminer.in.th:8090/fizzbuzz
+${Inputid}
+*** testcase ***
+GameFIZZBUZZ
+    Open Browser    ${WEP FIZZBUZZ}
+    Input Text
+*** keywords ***
