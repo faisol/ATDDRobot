@@ -6,7 +6,11 @@ ${URL}    http:\\dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
 ${BUTTON SAY}    btnSay
 *** Testcases ***
 ทดสอบ FizzBuzz เลข 2 ต้องพูดคำว่า 2
+<<<<<<< HEAD
     OpenBrowser    ${URL}
+=======
+    Open Browser    ${URL}
+>>>>>>> 6eafd08e445cbd89e7f815a292581ae86af5c926
     Wait Until Page Contains    FizzBuzz Game
     Input Text    number    2
     Click Button    ${BUTTON SAY}

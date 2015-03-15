@@ -2,10 +2,24 @@
 Library    Selenium2Library
 
 *** Variables ***
+${WEB}    http://www.dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+${SEARCH TEXT BOX}    number
+${SEARCH BUTTON}    btnSay
 
 *** Testcases ***
 ทดสอบ FizzBuzz เลข 7 ต้องพูดว่า 7
-
+    Open Browser    ${WEB}
+    Wait Until Page Contains    FizzBuzz
+    Input Text    ${SEARCH TEXT BOX}    7
+    Click Button    ${SEARCH BUTTON}
+    Wait Until Page contains    Number 7 Say 7
+    Close Browser
 ทดสอบ FizzBuzz เลข 15 ต้องพูดว่า FizzBuzz
+    Open Browser    ${WEB}
+    Wait Until Page Contains    FizzBuzz
+    Input Text    ${SEARCH TEXT BOX}    15
+    Click Button    ${SEARCH BUTTON}
+    Wait Until Page contains    Number 15 Say FizzBuzz
+    Close Browser
 
 *** Keywords ***
