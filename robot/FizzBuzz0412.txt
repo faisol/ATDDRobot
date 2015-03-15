@@ -2,12 +2,15 @@
 Library    Selenium2Library
 
 *** Variables ***
-
-
+${WEB dminer}    http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+${SEARCH TEXT BOX}    number
 *** Testcases ***
 Test FizzBuzz No 04 Say 4
-	Open Browser    http://dminer.in.th:0809/fizzbuzz/fizzbuzzgame.jsp
+	Open Browser    ${WEB dminer}
 	Wait Until Page Contain    FizzBuzz Game
+	Input Text    ${SEARCH TEXT BOX}    4
+	Click Button    btnsay
+	Wait Until Page Contain    Number 4 Say 4
 
 *** Keywords ***
 
