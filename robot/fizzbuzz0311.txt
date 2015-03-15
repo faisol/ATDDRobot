@@ -2,21 +2,25 @@
 Library    Selenium2Library
 
 *** Variables ***
+${URL}    http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+${BUTTON SAY}     btnSay
 
 *** Testcases ***
 ทดสอบ FizzBuzz หมายเลข 3 ต้องพูดว่า Fizz
-    Open Browser    http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+    Open Browser    ${URL}
     Wait Until Page Contains    FizzBuzz Game
     Input Text    number    3
-    Click Button    btnSay
+    Click Button    ${BUTTON SAY}
     Wait Until Page Contains    Number 3 Say Fizz
+    Close Browser
 
 ทดสอบ FizzBuzz หมายเลข 11 ต้องพูดว่า 11
-    Open Browser    http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+    Open Browser    ${URL}
     Wait Until Page Contains    FizzBuzz Game
     Input Text    number    11
-    Click Button    btnSay
+    Click Button    ${BUTTON SAY}
     Wait Until Page Contains    Number 11 Say 11
+    Close Browser
 
 *** Keywords ***
 
