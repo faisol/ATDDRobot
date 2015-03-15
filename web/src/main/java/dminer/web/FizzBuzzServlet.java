@@ -24,7 +24,7 @@ public class FizzBuzzServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head><title>Hello</title></head><body>");
         out.println("<h2>FizzBuzz Game</h2>");
-        out.println("Number "+numberStr+" say "+fizzBuzz.say(number) + "</body>");
+        out.println("Number "+numberStr+" Say "+fizzBuzz.say(number) + "</body>");
         out.println("</html>");
         out.close();
     }
