@@ -1,11 +1,14 @@
 *** Settings ***
 Library    Selenium2Library
 
-*** Variable ***
+*** Variables ***
+
 
 *** Testcases ***
-ทดสอบ FizzBuzz หมายเลข 2 ต้องพูดว่า 2
-    Open Browser   http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
-    Wait Until Page Contains    FizzBuzzGame
+ทดสอบ FizzBuzz เลข 2 ต้องพูดคำว่า Fizz
+     OpenBrowser    http:\\dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+     Wait Until Page Contains    FizzBuzzGame
+
+
 
 *** Keywords ***
