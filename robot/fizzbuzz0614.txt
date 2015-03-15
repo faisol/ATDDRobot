@@ -3,9 +3,10 @@ Library    selenium2Library
 
 *** variables ***
 ${WEP FIZZBUZZ}    http://dminer.in.th:8090/fizzbuzz
-${Inputid}
+${Input Id}    number
+${Click Button}    btnsay
 *** testcase ***
-GameFIZZBUZZ
     Open Browser    ${WEP FIZZBUZZ}
-    Input Text
+    Input Text    ${Input Id}    6
+    Click Button    ${Click Button}
 *** keywords ***
