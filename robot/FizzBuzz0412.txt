@@ -5,7 +5,9 @@ Library    Selenium2Library
 
 
 *** Testcases ***
-
+Test FizzBuzz No 04 Say 4
+	Open Browser    http://dminer.in.th:0809/fizzbuzz/fizzbuzzgame.jsp
+	Wait Until Page Contain    FizzBuzz Game
 
 *** Keywords ***
 
