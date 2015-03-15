@@ -5,10 +5,10 @@ Library    Selenium2Library
 
 *** Testcases ***
 Test FizzBuzz input number 8 must say 8
-	Open Browser    
-	Input Text    ${SEARCH TEXT BOX}    ${INPUT}
-	Click Button    ${SEARCH BUTTON}
-	Wait Until Page Contains    ${EXPECTED RESULT}
-	Close Browser
+	Open Browser    http://dminor.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+	Wait Until Page Contains    FizzBuzz Games
+Input Text    ${SEARCH TEXT BOX}    ${INPUT}
+Click Button    ${SEARCH BUTTON}
+Close Browser
  
 *** Keywords ***
