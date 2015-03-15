@@ -1,0 +1,14 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+
+*** Testcases ***
+Test FizzBuzz input number 8 must say 8
+	Open Browser    
+	Input Text    ${SEARCH TEXT BOX}    ${INPUT}
+	Click Button    ${SEARCH BUTTON}
+	Wait Until Page Contains    ${EXPECTED RESULT}
+	Close Browser
+ 
+*** Keywords ***

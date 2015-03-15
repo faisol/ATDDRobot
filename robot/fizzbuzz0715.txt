@@ -1,0 +1,11 @@
+*** Settings ***
+Library    Selenium2Library
+
+*** Variables ***
+
+*** Testcases ***
+ทดสอบ FizzBuzz เลข 7 ต้องพูดว่า 7
+
+ทดสอบ FizzBuzz เลข 15 ต้องพูดว่า FizzBuzz
+
+*** Keywords ***
