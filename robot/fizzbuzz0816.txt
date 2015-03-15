@@ -2,13 +2,21 @@
 Library    Selenium2Library
 
 *** Variables ***
+${WEB FizzBuzzGame}    http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
+${SEARCH TEXT BOX}    number
+${SEARCH BUTTON}    btnSay
 
 *** Testcases ***
-Test FizzBuzz input number 8 must say 8
-	Open Browser    http://dminor.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
-	Wait Until Page Contains    FizzBuzz Games
-Input Text    ${SEARCH TEXT BOX}    ${INPUT}
-Click Button    ${SEARCH BUTTON}
-Close Browser
- 
+Test FizzBuzz
+    [Template]    Test Search Google
+        8    Number 8 Say 8
+        16    Number 16 Say 16
+
 *** Keywords ***
+Test Search Google
+	[Arguments]    ${INPUT}    ${EXPECTED RESULT}
+	Open Browser    ${WEB FizzBuzzGame}
+	Input Text    ${SEARCH TEXT BOX}    ${INPUT}
+	Click Button    ${SEARCH BUTTON}
+	Wait Until Page Contains    ${EXPECTED RESULT}
+	Close Browser
