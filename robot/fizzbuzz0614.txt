@@ -1,12 +1,16 @@
 *** Settings ***
 Library    selenium2Library
 
-*** variables ***
-${WEP FIZZBUZZ}    http://dminer.in.th:8090/fizzbuzz
-${Input Id}    number
+*** Variables ***
+${WEP FIZZBUZZ}    http://dminer.in.th:8090/fizzbuzz/fizzbzzgame.jsp
 ${Click Button}    btnsay
-*** testcase ***
+
+*** Testcase ***
+Test FizzBuzz Number 6 Say Fizz
     Open Browser    ${WEP FIZZBUZZ}
-    Input Text    ${Input Id}    6
+    Wait Until Page Contains    FizzBuzz Game
+    Input Text    6
     Click Button    ${Click Button}
-*** keywords ***
+    Wait Until Page Contains    Number 6 Say Fizz
+    Close Browser
+*** Keywords ***
