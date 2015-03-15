@@ -6,21 +6,17 @@ ${WEB dminer}    http://dminer.in.th:8090/fizzbuzz/fizzbuzzgame.jsp
 ${SEARCH TEXT BOX}    number
 ${CLICK}    btnSay
 *** Testcases ***
-Test FizzBuzz No 04 Say 4
-	Open Browser    ${WEB dminer}
-	Wait Until Page Contains    FizzBuzz Game
-	Input Text    ${SEARCH TEXT BOX}    4
-	Click Button    ${CLICK}
-	Wait Until Page Contains    Number 4 Say 4
-	Close Browser
-
-Test FizzBuzz No 12 Say Fizz
-	Open Browser    ${WEB dminer}
-	Wait Until Page Contains    FizzBuzz Game
-	Input Text    ${SEARCH TEXT BOX}    12
-	Click Button    ${CLICK}
-	Wait Until Page Contains    Number 12 Say Fizz
-	Close Browser
+Test FizzBuzz No 0412 Say 4 Fizz
+	[Template]    FizzBuzz Game
+	4    Number 4 Say 4
+	12    Number 12 Say Fizz
 
 *** Keywords ***
-
+FizzBuzz Game
+	[Arguments]    ${INPUT}    ${EXPECTED RESULT}
+	Open Browser    ${WEB dminer}
+	Wait Until Page Contains    FizzBuzz Game
+	Input Text    ${SEARCH TEXT BOX}    ${INPUT}
+	Click Button    ${CLICK}
+	Wait Until Page Contains    ${EXPECTED RESULT}
+	Close Browser
