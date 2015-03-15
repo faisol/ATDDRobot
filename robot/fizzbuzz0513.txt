@@ -1,0 +1,11 @@
+*** Setting ***
+Library    selenium2Library
+
+*** Variables ***
+
+
+*** Testcases ***
+
+
+*** Keywords ***
+
